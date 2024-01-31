@@ -76,7 +76,6 @@ ul {
     .main {
         background: yellow;
         flex-direction: column;
-
     }
 }
 
@@ -121,6 +120,9 @@ ul {
 .main--aside>p {
     background: khaki;
     height: 1rem;
+}
+
+.main--aside>h2 {
     margin-bottom: .5rem;
 }
 
