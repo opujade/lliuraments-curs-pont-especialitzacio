@@ -71,7 +71,7 @@ a {
 /* Header */
 .header {
     flex-direction: column;
-    background-image: url("/nivell-2/img/header.jpg");
+    background-image: url("/img/header.jpg");
     background-repeat: no-repeat;
     background-position: center;
     height: 24rem;
