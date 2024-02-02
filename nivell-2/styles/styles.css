@@ -62,6 +62,7 @@ a {
     height: 24rem;
     gap: var(--element-half-size);
     padding-bottom: 0;
+    animation: opacitat 2s ease-in;
 }
 
 .header--nav {
@@ -74,6 +75,7 @@ a {
     height: 100%;
     transition: .2s;
     border-radius: 1rem;
+    animation: apareixer 1s ease-in;
 }
 
 .header--nav--logo:hover {
@@ -208,18 +210,33 @@ a {
     }
 }
 
+@keyframes apareixer {
+    0% {
+        opacity: 0;
+        transform: translateY(6.25rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes opacitat {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 /* Main */
 .main {
     display: flex;
     padding: 0;
     margin-top: var(--element-half-size);
-}
-
-@media only screen and (max-width: 600px) {
-    .main {
-        background: #fffe03;
-        flex-direction: column;
-    }
 }
 
 .main--section {
@@ -237,6 +254,7 @@ a {
     background: var(--main-article-background-color);
     max-height: 33rem;
     width: 46%;
+    animation: opacitat 2s ease-in;
 }
 
 .main--section--article>h3 {
@@ -299,31 +317,28 @@ a {
     margin: var(--element-full-size);
 }
 
-@media only screen and (max-width: 480px) {
-    .main--section {
-        background: #09516e;
-    }
-
-    .main--section--article {
+@media only screen and (max-width: 600px) {
+    .main {
         flex-direction: column;
     }
 
-    .main--section--article>h3,
-    .main--section--article>p {
-        background: #62949d;
-    }
-
-    .main--section>p {
-        background: #a3ddcb;
+    .main--section--article {
+        width: 80%;
+        max-height: 34rem;
     }
 
     .main--aside {
-        background: #fd7a55;
+        margin: var(--element-half-size) 0 0 0;
     }
 
-    .main--aside>h2,
     .main--aside>p {
-        background: #fcb26b;
+        margin-bottom: var(--element-full-size);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .main--section--article {
+        flex-direction: column;
     }
 }
 
@@ -334,6 +349,7 @@ a {
     text-align: center;
     background: var(--main-article-background-color);
 }
+
 .footer>p {
     width: 100%;
-} 
+}
